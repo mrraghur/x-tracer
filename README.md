@@ -68,6 +68,7 @@ python3 x_tracer.py \
   -s <signal> \
   -t <time_ps> \
   [-f text|json|dot] \
+  [--dot-direction forward|backward] \
   [--max-depth 100]
 ```
 
@@ -80,6 +81,7 @@ python3 x_tracer.py \
 | `-s, --signal` | Query signal in `path[bit]` format (e.g., `tb.dut.result[3]`) or scalar format (e.g., `tb.dut.clk`) |
 | `-t, --time` | Query time in picoseconds |
 | `-f, --format` | Output format: `text` (default), `json`, or `dot` |
+| `--dot-direction` | DOT edge direction: `forward` schematic-style cause-to-effect flow (default) or `backward` raw cause-tree flow |
 | `--max-depth` | Maximum backward trace depth (default: 100) |
 | `--top-module` | Top module name, auto-detected if omitted |
 
@@ -146,7 +148,64 @@ python3 x_tracer.py -n design.v -n tb.v -v sim.vcd \
 
 ```bash
 python3 x_tracer.py -n design.v -n tb.v -v sim.vcd \
-  -s "tb.dut.y[0]" -t 30000 -f dot | dot -Tpng -o trace.png
+  -s "tb.dut.y[0]" -t 30000 -f dot > trace.dot
+
+dot -Tpng trace.dot -o trace.png
+```
+
+DOT output defaults to a forward schematic-style view: causal inputs are placed
+on the left and flow toward the queried X output on the right. Use
+`--dot-direction backward` to get the raw cause-tree view where the queried X
+output points backward to its causes.
+
+DOT node labels include:
+
+- Cause type, signal, query time, and `type=<cell_type>` when a driving cell is known
+- A warm non-white graph background for readability
+- Bold last-two hierarchy components in signal names, e.g. `tb.<B>dut.final_out[0]</B>`
+
+**Iconized DOT and PNG output:**
+
+The CLI emits plain DOT. To add cell icons, post-process the DOT with
+`tools/iconize_dot.py`. Known icons live in `x-tracer-icons/`; unknown cell
+types remain text-only and still render.
+
+```bash
+python3 x_tracer.py \
+  -n tests/cases/stress_edge/wide_fanout/netlist.v \
+  -n tests/cases/stress_edge/wide_fanout/tb.v \
+  -v tests/cases/stress_edge/wide_fanout/sim.vcd \
+  -s "tb.dut.final_out" \
+  -t 295000 \
+  --max-depth 300 \
+  -f dot > /tmp/x-tracer-wide-fanout-plain.dot
+
+python3 tools/iconize_dot.py \
+  /tmp/x-tracer-wide-fanout-plain.dot \
+  /tmp/x-tracer-wide-fanout.dot
+
+dot -Tpng /tmp/x-tracer-wide-fanout.dot \
+  -o /tmp/x-tracer-wide-fanout.png
+```
+
+Sample output is here `x-tracer-wide-fanout.png`
+
+Run `dot` from the repository root when the DOT references relative icon paths
+like `x-tracer-icons/dff_r.png`. The default icon mapping is:
+
+| Cell type | Icon |
+|-----------|------|
+| `assign` | `x-tracer-icons/buf.png` |
+| `buf` | `x-tracer-icons/buf.png` |
+| `dff_r` | `x-tracer-icons/dff_r.png` |
+| `and` | `x-tracer-icons/and.png` |
+| `or` | `x-tracer-icons/or.png` |
+| `xor` | `x-tracer-icons/xor.png` |
+
+Regenerate the standard icon PNGs with:
+
+```bash
+python3 x-tracer-icons/generate_standard_icons.py
 ```
 
 ## Important Notes
@@ -320,6 +379,8 @@ Unknown cells fall through to the **conservative fallback** (`unknown_cell` caus
 - No bidirectional pad analysis
 
 See `docs/SEMANTIC_SPEC.md` for the full specification.
+
+![Sample dot output screenshot](x-tracer-wide-fanout.png)
 
 ## License
 

@@ -87,7 +87,18 @@ class TestDotFormat:
         manifest = _load_manifest(case_dir)
         result = _run_cli(*_case_args(case_dir, manifest, "dot"))
         assert "digraph" in result.stdout
-        assert "->" in result.stdout or "n0" in result.stdout
+        assert "rankdir=LR" in result.stdout
+        assert "n1 -> n0" in result.stdout
+        assert "type=not" in result.stdout
+        assert "tb.<B>dut.y[0]</B>" in result.stdout
+
+    def test_dot_backward_direction(self):
+        case_dir = CASES_DIR / "gates" / "synth_s1_not_1in_xmask1_na"
+        manifest = _load_manifest(case_dir)
+        result = _run_cli(*_case_args(case_dir, manifest, "dot"),
+                          "--dot-direction", "backward")
+        assert "rankdir=TB" in result.stdout
+        assert "n0 -> n1" in result.stdout
 
 
 # --- Test 4: signal not X ---

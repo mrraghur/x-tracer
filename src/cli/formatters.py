@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from html import escape
 from typing import Any
 
 from src.tracer.core import XCause
@@ -54,11 +55,30 @@ def format_json(node: XCause) -> str:
     return json.dumps(_node_to_dict(node), indent=2)
 
 
-def format_dot(node: XCause) -> str:
-    """Format cause tree as Graphviz DOT."""
-    lines: list[str] = ["digraph xcause {", "  rankdir=TB;"]
+def format_dot(node: XCause, direction: str = "forward") -> str:
+    """Format cause tree as Graphviz DOT.
+
+    direction="forward" renders causes/inputs on the left flowing toward the
+    queried X output. direction="backward" preserves the raw cause-tree order.
+    """
+    rankdir = "LR" if direction == "forward" else "TB"
+    lines: list[str] = [
+        "digraph xcause {",
+        f"  rankdir={rankdir};",
+        '  bgcolor="#f3ead7";',
+    ]
     node_ids: dict[int, str] = {}
     counter = [0]
+
+    def format_signal(value: str) -> str:
+        parts = value.split(".")
+        if len(parts) < 2:
+            return f"<B>{escape(value, quote=False)}</B>"
+        prefix = ".".join(parts[:-2])
+        suffix = ".".join(parts[-2:])
+        if prefix:
+            return f"{escape(prefix + '.', quote=False)}<B>{escape(suffix, quote=False)}</B>"
+        return f"<B>{escape(suffix, quote=False)}</B>"
 
     def get_id(n: XCause) -> str:
         oid = id(n)
@@ -69,11 +89,21 @@ def format_dot(node: XCause) -> str:
 
     def visit(n: XCause) -> None:
         nid = get_id(n)
-        label = f"{n.cause_type}\\n{n.signal}\\nt={n.time}"
-        lines.append(f'  {nid} [label="{label}"];')
+        label_parts = [
+            escape(n.cause_type, quote=False),
+            format_signal(n.signal),
+            escape(f"t={n.time}", quote=False),
+        ]
+        if n.gate is not None:
+            label_parts.append(escape(f"type={n.gate.cell_type}", quote=False))
+        label = '<BR ALIGN="CENTER"/>'.join(label_parts)
+        lines.append(f"  {nid} [label=<{label}>];")
         for child in n.children:
             cid = get_id(child)
-            lines.append(f"  {nid} -> {cid};")
+            if direction == "forward":
+                lines.append(f"  {cid} -> {nid};")
+            else:
+                lines.append(f"  {nid} -> {cid};")
             visit(child)
 
     visit(node)

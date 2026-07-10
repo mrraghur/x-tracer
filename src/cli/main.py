@@ -48,6 +48,9 @@ def parse_signal(signal_str: str) -> tuple[str, int]:
 @click.option("--format", "-f", "output_format", default="text",
               type=click.Choice(["text", "json", "dot"]),
               help="Output format")
+@click.option("--dot-direction", default="forward", show_default=True,
+              type=click.Choice(["forward", "backward"]),
+              help="DOT edge direction: forward schematic or backward cause tree")
 @click.option("--max-depth", default=100, type=int,
               help="Maximum trace depth")
 @click.option("--top-module", default=None, type=str,
@@ -58,7 +61,7 @@ def parse_signal(signal_str: str) -> tuple[str, int]:
               help="Use fast regex-based netlist parser (recommended for large netlists >10MB)")
 @click.option("--interactive", "-i", is_flag=True, default=False,
               help="Interactive mode: step through the trace one level at a time")
-def cli(netlist, vcd, signal, query_time, output_format, max_depth, top_module, vcd_prefix, fast_parser, interactive):
+def cli(netlist, vcd, signal, query_time, output_format, dot_direction, max_depth, top_module, vcd_prefix, fast_parser, interactive):
     """X-Tracer: trace the root cause of X values in gate-level simulations."""
     # Parse signal
     sig_path, sig_bit = parse_signal(signal)
@@ -254,7 +257,7 @@ def cli(netlist, vcd, signal, query_time, output_format, max_depth, top_module, 
     elif output_format == "json":
         click.echo(format_json(result))
     elif output_format == "dot":
-        click.echo(format_dot(result))
+        click.echo(format_dot(result, direction=dot_direction))
 
 
 def main():

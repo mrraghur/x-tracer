@@ -1,0 +1,17 @@
+digraph icon {
+  graph [bgcolor="transparent", margin=0, pad=0];
+  node [fontname="Helvetica", fontsize=12, margin=0];
+  buf [
+    shape=polygon,
+    sides=3,
+    orientation=90,
+    fixedsize=true,
+    width=0.9,
+    height=0.55,
+    style="filled",
+    fillcolor="#fff7ed",
+    color="#c2410c",
+    penwidth=2,
+    label="BUF"
+  ];
+}

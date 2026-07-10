@@ -1,0 +1,850 @@
+digraph xcause {
+  rankdir=LR;
+  bgcolor="#f3ead7";
+  n0 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.final_out[0]</B><BR ALIGN="CENTER"/>t=295000<BR ALIGN="CENTER"/>type=assign</FONT></TD></TR>
+    </TABLE>
+  >];
+  n1 -> n0;
+  n1 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.out_q[0]</B><BR ALIGN="CENTER"/>t=295000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n2 -> n1;
+  n2 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t5_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n3 -> n2;
+  n3 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t4_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n4 -> n3;
+  n4 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t3_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n5 -> n4;
+  n5 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n6 -> n5;
+  n6 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n7 -> n6;
+  n7 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n8 -> n7;
+  n8 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_0[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n8;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n10 -> n6;
+  n10 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n11 -> n10;
+  n11 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n11;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n12 -> n5;
+  n12 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n13 -> n12;
+  n13 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_2[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n14 -> n13;
+  n14 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_2[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n14;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n15 -> n12;
+  n15 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_3[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n16 -> n15;
+  n16 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_3[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n16;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n17 -> n4;
+  n17 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n18 -> n17;
+  n18 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_2[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n19 -> n18;
+  n19 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_4[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n20 -> n19;
+  n20 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_4[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n20;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n21 -> n18;
+  n21 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_5[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n22 -> n21;
+  n22 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_5[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n22;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n23 -> n17;
+  n23 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_3[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n24 -> n23;
+  n24 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_6[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n25 -> n24;
+  n25 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_6[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n25;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n26 -> n23;
+  n26 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_7[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n27 -> n26;
+  n27 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/and.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_7[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=and</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n27;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n28 -> n3;
+  n28 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t3_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n29 -> n28;
+  n29 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_2[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n30 -> n29;
+  n30 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_4[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n31 -> n30;
+  n31 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_8[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n32 -> n31;
+  n32 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_8[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n33 -> n30;
+  n33 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_9[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n34 -> n33;
+  n34 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_9[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n35 -> n29;
+  n35 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_5[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n36 -> n35;
+  n36 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_10[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n37 -> n36;
+  n37 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_10[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n38 -> n35;
+  n38 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_11[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n39 -> n38;
+  n39 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_11[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n40 -> n28;
+  n40 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_3[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n41 -> n40;
+  n41 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_6[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n42 -> n41;
+  n42 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_12[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n43 -> n42;
+  n43 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_12[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n44 -> n41;
+  n44 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_13[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n45 -> n44;
+  n45 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_13[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n46 -> n40;
+  n46 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_7[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n47 -> n46;
+  n47 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_14[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n48 -> n47;
+  n48 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_14[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n49 -> n46;
+  n49 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_15[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n50 -> n49;
+  n50 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/or.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_injection<BR ALIGN="CENTER"/>tb.<B>dut.g_15[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=or</FONT></TD></TR>
+    </TABLE>
+  >];
+  n51 -> n2;
+  n51 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t4_1[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n52 -> n51;
+  n52 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t3_2[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n53 -> n52;
+  n53 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_4[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n54 -> n53;
+  n54 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_8[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n55 -> n54;
+  n55 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_16[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n56 -> n55;
+  n56 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_16[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n56;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n57 -> n54;
+  n57 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_17[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n58 -> n57;
+  n58 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_17[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n58;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n59 -> n53;
+  n59 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_9[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n60 -> n59;
+  n60 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_18[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n61 -> n60;
+  n61 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_18[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n61;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n62 -> n59;
+  n62 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_19[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n63 -> n62;
+  n63 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_19[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n63;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n64 -> n52;
+  n64 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_5[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n65 -> n64;
+  n65 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_10[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n66 -> n65;
+  n66 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_20[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n67 -> n66;
+  n67 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_20[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n67;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n68 -> n65;
+  n68 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_21[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n69 -> n68;
+  n69 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_21[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n69;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n70 -> n64;
+  n70 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_11[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n71 -> n70;
+  n71 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_22[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n72 -> n71;
+  n72 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_22[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n72;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n73 -> n70;
+  n73 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_23[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n74 -> n73;
+  n74 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_23[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n74;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n75 -> n51;
+  n75 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t3_3[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n76 -> n75;
+  n76 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_6[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n77 -> n76;
+  n77 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_12[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n78 -> n77;
+  n78 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_24[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n79 -> n78;
+  n79 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_24[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n79;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n80 -> n77;
+  n80 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_25[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n81 -> n80;
+  n81 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_25[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n81;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n82 -> n76;
+  n82 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_13[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n83 -> n82;
+  n83 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_26[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n84 -> n83;
+  n84 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_26[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n84;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n85 -> n82;
+  n85 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_27[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n86 -> n85;
+  n86 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_27[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n86;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n87 -> n75;
+  n87 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t2_7[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n88 -> n87;
+  n88 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_14[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n89 -> n88;
+  n89 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_28[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n90 -> n89;
+  n90 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_28[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n90;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n91 -> n88;
+  n91 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_29[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n92 -> n91;
+  n92 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_29[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n92;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n93 -> n87;
+  n93 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/xor.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.t1_15[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=xor</FONT></TD></TR>
+    </TABLE>
+  >];
+  n94 -> n93;
+  n94 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_30[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n95 -> n94;
+  n95 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_30[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n95;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n96 -> n93;
+  n96 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">sequential_capture<BR ALIGN="CENTER"/>tb.<B>dut.p_31[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+  n97 -> n96;
+  n97 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/buf.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">x_propagation<BR ALIGN="CENTER"/>tb.<B>dut.g_31[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=buf</FONT></TD></TR>
+    </TABLE>
+  >];
+  n9 -> n97;
+  n9 [shape=plain, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0" COLOR="#334155">
+      <TR><TD><IMG SRC="x-tracer-icons/dff_r.png"/></TD></TR>
+      <TR><TD><FONT POINT-SIZE="10">uninit_ff<BR ALIGN="CENTER"/>tb.<B>dut.src_q[0]</B><BR ALIGN="CENTER"/>t=285000<BR ALIGN="CENTER"/>type=dff_r</FONT></TD></TR>
+    </TABLE>
+  >];
+}
